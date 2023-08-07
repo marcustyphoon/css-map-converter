@@ -1,0 +1,84 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "extends": [
+    "react-app",
+    "airbnb/whitespace",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    // disabled or reduced
+    "no-restricted-syntax": "off",
+    "no-plusplus": "off",
+    "func-names": "off",
+    "no-continue": "off",
+    "no-param-reassign": ["warn", { "props": false }],
+    "consistent-return": "off",
+    "react/react-in-jsx-scope": "off",
+    "id-length": [
+      "warn",
+      {
+        "exceptions": [
+          // counters and comparisons
+          "i",
+          "j",
+          "a",
+          "b",
+          // events and errors
+          "e",
+          // unused arguments
+          "_"
+        ]
+      }
+    ],
+
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+
+    // typescript:
+    "react/jsx-filename-extension": ["warn", { "extensions": [".jsx", ".tsx"] }],
+    "import/extensions": [
+      "warn",
+      "ignorePackages",
+      { "js": "never", "jsx": "never", "ts": "never", "tsx": "never" }
+    ],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "argsIgnorePattern": "^e$|^_", "varsIgnorePattern": "^e$|^_" }
+    ],
+
+    // suggested to use destructuring instead
+    // https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/default_props/
+    "react/require-default-props": "off",
+
+    // prettier compat
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+
+    // vanilla extract + vs code incompatibility
+    "import/no-unresolved": ["warn", { "ignore": ["\\.css$"] }]
+  }
+}
