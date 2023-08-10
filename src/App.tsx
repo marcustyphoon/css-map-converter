@@ -223,7 +223,7 @@ function App() {
             if (entry.type === 'key') {
               if (entry.hasDot) {
                 return entry.keys.length > 1
-                  ? `is:(${entry.keys.map((key) => `.${key}`).join(',')})`
+                  ? `:is(${entry.keys.map((key) => `.${key}`).join(',')})`
                   : entry.keys.map((key) => `.${key}`).join(',');
               }
               return entry.keys.length > 1
