@@ -1,4 +1,5 @@
 {
+  "name": "css-map-converter",
   "type": "module",
   "scripts": {
     "dev": "vite",
