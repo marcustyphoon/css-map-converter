@@ -49,17 +49,26 @@ function cssMapReducer(state: cssMapDataState, { index, text }: cssMapDataAction
   let map: cssMap = {};
   let keys: cssMapKey[] = [];
   let values: cssMapValue[] = [];
-
   const reverseMap: reverseCssMap = {};
+
   try {
     if (text) {
-      const parsed = JSON.parse(text);
+      const parsed = JSON.parse(text) as cssMap;
 
       if (!Object.values(parsed).every((value) => Array.isArray(value))) {
         throw new Error('JSON value is not an array');
       }
 
-      map = parsed;
+      map = Object.fromEntries(
+        Object.entries(parsed).filter(([key, value]) => {
+          if (!value.every((string) => typeof string === 'string' && string.length >= 4)) {
+            // eslint-disable-next-line no-console
+            console.log('Warning: CSS map key', key, 'has invalid value', value);
+            return false;
+          }
+          return true;
+        }),
+      );
 
       keys = Object.values(map).flat().filter(Boolean);
       values = Object.keys(map).filter(Boolean);
