@@ -17,8 +17,8 @@
     "react-error-boundary": "^4.0.13"
   },
   "devDependencies": {
-    "@types/react": "^18.2.75",
-    "@types/react-dom": "^18.2.24",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
     "@vitejs/plugin-react": "^4.0.4",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "19.0.4",
@@ -29,8 +29,8 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.4",
-    "vite": "^5.2.8"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10"
   },
   "packageManager": "pnpm@8.15.7+sha256.50783dd0fa303852de2dd1557cd4b9f07cb5b018154a6e76d0f40635d6cee019",
   "engines": {
