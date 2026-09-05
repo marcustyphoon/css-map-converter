@@ -14,11 +14,11 @@
     "@vanilla-extract/vite-plugin": "^5.2.6",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-error-boundary": "^6.1.2"
+    "react-error-boundary": "^6.1.4"
   },
   "devDependencies": {
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
+    "@types/react-dom": "^19.2.5",
     "@vitejs/plugin-react": "^5.2.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "19.0.4",
